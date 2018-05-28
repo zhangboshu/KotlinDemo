@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,10 +12,9 @@
         android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        tools:text="你好的"
         android:id="@+id/textview"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -29,7 +27,8 @@
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/editText"
-        app:layout_constraintTop_toBottomOf="@id/view"/>
+        app:layout_constraintTop_toBottomOf="@id/view"
+        tools:text="你好的" />
 
     <EditText
         android:id="@+id/editText"
@@ -43,7 +42,7 @@
         app:layout_constraintHorizontal_weight="2"
         app:layout_constraintLeft_toRightOf="@id/textview"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view"/>
+        app:layout_constraintTop_toBottomOf="@id/view" />
 
     <View
         android:id="@+id/view2"
@@ -55,7 +54,7 @@
         android:background="@color/colorPrimary"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview"/>
+        app:layout_constraintTop_toBottomOf="@id/textview" />
 
     <TextView
         android:id="@+id/textview2"
@@ -69,7 +68,7 @@
         app:layout_constraintHorizontal_weight="2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/editText2"
-        app:layout_constraintTop_toBottomOf="@id/view2"/>
+        app:layout_constraintTop_toBottomOf="@id/view2" />
 
     <EditText
         android:id="@+id/editText2"
@@ -84,7 +83,7 @@
         app:layout_constraintHorizontal_weight="3"
         app:layout_constraintLeft_toRightOf="@id/textview2"
         app:layout_constraintRight_toLeftOf="@id/img"
-        app:layout_constraintTop_toBottomOf="@id/view2"/>
+        app:layout_constraintTop_toBottomOf="@id/view2" />
 
     <ImageView
         android:id="@+id/img"
@@ -95,15 +94,26 @@
         app:layout_constraintBottom_toBottomOf="@id/editText2"
         app:layout_constraintLeft_toRightOf="@id/editText2"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/editText2"/>
+        app:layout_constraintTop_toTopOf="@id/editText2" />
 
     <Button
         android:id="@+id/clickMe"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="点击我"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="点击我"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <TextView
+        android:id="@+id/sensorTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview2" />
 
 </android.support.constraint.ConstraintLayout>
