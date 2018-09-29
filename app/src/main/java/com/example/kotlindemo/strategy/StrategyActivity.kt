@@ -1,4 +1,4 @@
-package com.example.kotlindemo.simpleFactory
+package com.example.kotlindemo.strategy
 
 import android.content.Context
 import android.content.Intent
@@ -9,13 +9,14 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import com.example.kotlindemo.R
+import com.example.kotlindemo.simpleFactory.CashAdapter
 import kotlinx.android.synthetic.main.activity_simple_factory.*
 
-class SimpleFactoryActivity : AppCompatActivity() {
+class StrategyActivity : AppCompatActivity() {
 
     companion object {
         fun start(context: Context) {
-            val intent = Intent(context, SimpleFactoryActivity::class.java)
+            val intent = Intent(context, StrategyActivity::class.java)
             context.startActivity(intent)
         }
     }
@@ -48,8 +49,8 @@ class SimpleFactoryActivity : AppCompatActivity() {
 
         ok.setOnClickListener {
             if (inputPrice.text.toString().isNotEmpty() && inputNum.text.toString().isNotEmpty()) {
-                val cashSuper = CashFactory.createCashAccept(type) //工厂模式
-                val totalPrices = cashSuper.acceptCash(inputPrice.text.toString().toDouble() * inputNum.text.toString().toDouble())
+                val cashSuper = CashContext(type) //策略模式
+                val totalPrices = cashSuper.getResult(inputPrice.text.toString().toDouble() * inputNum.text.toString().toDouble())
                 arrayList.add("单价: " + inputPrice.text.toString() + "  数量: " + inputNum.text.toString() +
                         "  $type" + "  合计: " + totalPrices.toString())
                 recyclerAdapter.setData(arrayList)

@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".simpleFactory.SimpleFactoryActivity">
         </activity>
+        <activity android:name=".strategy.StrategyActivity">
+        </activity>
     </application>
 
 </manifest>
