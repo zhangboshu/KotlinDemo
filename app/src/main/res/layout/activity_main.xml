@@ -20,5 +20,27 @@
         android:text="策略模式"
         app:layout_constraintLeft_toRightOf="@id/simpleFactory"/>
 
+    <Button
+        android:id="@+id/decorator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="装饰模式"
+        app:layout_constraintLeft_toRightOf="@id/strategy"/>
+
+
+    <Button
+        android:id="@+id/proxy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="代理模式"
+        app:layout_constraintLeft_toRightOf="@id/decorator"/>
+
+    <Button
+        android:id="@+id/factory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="工厂模式"
+        app:layout_constraintTop_toBottomOf="@id/simpleFactory"/>
+
 
 </android.support.constraint.ConstraintLayout>
